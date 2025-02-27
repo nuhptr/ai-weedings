@@ -1,10 +1,15 @@
+import CustomCard from "@/features/auth/card"
+
 export default function SignInPage() {
     return (
-        <div className="text-white text-center">
-            <h1 className="text-3xl font-bold mb-4">Sign In Page</h1>
-            <p className="text-gray-300">
-                Selamat datang kembali! Silakan masuk ke akun Anda.
-            </p>
-        </div>
+        <main className="flex flex-col gap-12 text-white">
+            <div className="flex items-center flex-col gap-2">
+                <h1 className="text-6xl font-semibold">WEEDINGS</h1>
+                <p className="font-medium tracking-normal leading-[130%] text-center text-xl">
+                    Magical moments in an enchanting atmosphere
+                </p>
+            </div>
+            <CustomCard />
+        </main>
     )
 }
