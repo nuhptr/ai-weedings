@@ -1,5 +1,5 @@
 import React from "react"
 
 export default function SignInPage() {
-    return <div>AuthPage</div>
+    return <div>Sign In Page</div>
 }
