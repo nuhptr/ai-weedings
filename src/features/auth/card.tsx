@@ -4,6 +4,7 @@ import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
+import { TextField } from "@mui/material"
 
 const bull = (
     <Box component="span" sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}>
@@ -15,17 +16,37 @@ export default function CustomCard() {
     return (
         <Card sx={{ minWidth: 275, padding: 2, borderRadius: 3 }}>
             <CardContent>
-                <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 14 }}>
-                    Word of the Day
-                </Typography>
                 <Typography variant="h5" component="div">
-                    be{bull}nev{bull}o{bull}lent
+                    Ayana Wedding Collections
                 </Typography>
-                <Typography sx={{ color: "text.secondary", mb: 1.5 }}>adjective</Typography>
+                
+                <Box component="form" sx={{ '& > :not(style)': { my: 1 }, borderRadius: 2 }}>
+                <TextField 
+                    fullWidth
+                    label="Email"
+                    variant="outlined"
+                    type="email"
+                    required 
+                    sx={{
+                        '& .MuiOutlinedInput-root': {
+                            height: 50,
+                            borderRadius: 2
+                        }
+                    }}/>
+                </Box>
+            
+                <Button variant="contained" 
+                        fullWidth
+                        sx={{
+                            borderRadius: 2,
+                            mt: 1.5,
+                            height: 40
+                        }}>
+                Login
+                </Button>
+            
             </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
+            
         </Card>
     )
 }
