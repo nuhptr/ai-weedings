@@ -1,3 +1,3 @@
-export type childrenProps = {
+type childrenProps = {
     children: React.ReactNode
 }
